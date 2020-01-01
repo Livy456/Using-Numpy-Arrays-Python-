@@ -1,0 +1,25 @@
+def evolve_heat_fast(u):
+    """ Given a 2D array of heat-values (at fixed boundary), produces
+        the new heat distribution after one iteration of the finite 
+        difference method.
+        
+        Parameters
+        ----------
+        u : numpy.ndarray shape=(M, N)
+            An MxN array of heat values at time-step t-1.
+            (M and N are both at least 2)
+        
+        Returns
+        -------
+        numpy.ndarray, shape=(M, N)
+            An MxN array of heat values at time-step t.
+        """       
+    # student code goes here
+    new_temps = u.copy()
+    old_temps = u.copy()
+    M, N = u.shape
+    
+    
+    new_temps [1:-1, 1:-1] = (1/4) * (old_temps[1:-1, :-2] + old_temps[1:-1, 2: ] + old_temps[ :-2,1:-1] + old_temps[2: ,1:-1])
+    
+    return(new_temps)
