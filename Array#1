@@ -1,0 +1,29 @@
+import numpy as np
+def evolve_heat_slow(u):
+    """ Given a 2D array of heat-values (at fixed boundary), produces
+        the new heat distribution after one iteration of the finite 
+        difference method.
+        
+        Parameters
+        ----------
+        u : numpy.ndarray shape=(M, N)
+            An MxN array of heat values at time-step t-1.
+            (M and N are both at -least 2)
+        
+        Returns
+        -------
+        numpy.ndarray, shape=(M, N)
+            An MxN array of heat values at time-step t.
+        """       
+    # student code goes here
+    new_u = u.copy()       # makes another array for the program to return but it's equal to og array
+    for index_rows in range(len(u)):
+        for index_cols in range(len(u)):
+    
+            if index_rows == 0 or index_rows == (len(u) - 1) or index_cols == 0 or index_cols == (len(u[index_rows]) - 1):
+                continue
+            else:
+                new_u[index_rows, index_cols] = (1/4) * (u[index_rows, index_cols + 1] + u[index_rows, index_cols - 1] + u[index_rows + 1, index_cols] + u[index_rows - 1, index_cols])
+            
+        # u[1:-1] is going from the second element in the array in the second row to last element in array, which is not good
+    return(new_u)
