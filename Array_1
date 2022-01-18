@@ -27,3 +27,4 @@ def evolve_heat_slow(u):
             
         # u[1:-1] is going from the second element in the array in the second row to last element in array, which is not good
     return(new_u)
+vim: syntax=python
