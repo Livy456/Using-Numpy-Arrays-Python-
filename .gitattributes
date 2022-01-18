@@ -1,3 +1,0 @@
-*.array_1 linguist-detectable
-*.array_2 linguist-detectable
-tools/export_bom.py -linguist-detectable
