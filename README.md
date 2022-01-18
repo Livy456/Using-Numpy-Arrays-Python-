@@ -1,6 +1,6 @@
 # Using-Numpy-Arrays-Python-
-Array_1
-- I was tasked to write a Python function that implements the finite differences method to produce heat dispersion of material at the next time-step.
+## Array_1
+I was given a 2D array of heat-values (at fixed boundary) and tasked to write a program that produces the new heat distribution after one iteration of the finite difference method.
 
-Array_2
-- I was tasked to write a Python function that uses NumPy array arithmetic to vectorize the finite-difference method that had been implemented in the above project.
+## Array_2
+I was tasked to write a Python function that does the above, utilizing NumPy array arithmetic to vectorize the finite-difference method. 
